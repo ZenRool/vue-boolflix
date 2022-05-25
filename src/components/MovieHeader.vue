@@ -27,7 +27,8 @@ export default {
 .header {
   height: 140px;
   &__logo {
-    margin-left: calc(100% / 12);
+    margin-left: 2%;
+    height: 30%;
     img {
       height: 100%;
       width: auto;

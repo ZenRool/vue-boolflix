@@ -19,19 +19,19 @@ export default {
 <style lang="scss" scoped>
 .form {
   height: 100%;
-  margin-left: 2rem;
+  margin-left: 1rem;
   input {
-    width: 250px;
-    font-size: 1.5rem;
+    width: 160px;
+    font-size: 1.1rem;
     padding: 0.5rem 0.8rem;
     caret-color: rgba($color: #ff0000, $alpha: 0.6);
     border-color: red;
   }
   button {
     margin-left: 1rem;
-    font-size: 1.6rem;
-    height: 60px;
-    padding: 0 2rem;
+    font-size: 1.1rem;
+    height: 30px;
+    padding: 0 0.5rem;
   }
 }
 </style>
