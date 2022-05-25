@@ -1,0 +1,85 @@
+// RESET 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.p-1 {
+    padding: 0.5rem;
+}
+// Button 
+.btn {
+    &-red {
+        border: none;
+        background-color: red;
+        color: white;
+        &:hover {
+            background-color: #FF3030;
+        }
+    }
+}
+// display
+.d-none {
+    display: none !important;
+}
+.d-flex {
+    display: flex;
+}
+// flex
+.wrap {
+    flex-wrap: wrap;
+} 
+.flex-column {
+    flex-direction: column;
+}
+// justify content
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-start {
+    justify-content: start;
+}
+// Align-items
+.align-items-center {
+    align-items: center;
+}
+.container {
+    min-width: 540px;
+    max-width: 100%;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    &-fluid {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+}
+li {
+    width: calc(100% / 2);
+}
+// md 
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+    li {
+        width: calc(100% / 3);
+    }
+}
+// lg 
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+    li {
+        width: calc(100% / 4);
+    }
+}
+// xl 
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+    li {
+        width: calc(100% / 6);
+    }
+}
