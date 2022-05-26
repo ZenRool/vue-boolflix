@@ -124,6 +124,7 @@ li {
     }
     &.description {
       font-size: 1rem;
+      overflow: hidden;
     }
   }
   .flag {

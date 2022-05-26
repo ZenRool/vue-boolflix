@@ -10,9 +10,6 @@
     font-family: sans-serif;
     color: $text-color;
 }
-.p-1 {
-    padding: 0.5rem;
-}
 // Button 
 .btn {
     &-red {
@@ -59,9 +56,13 @@
         padding: 0 0.5rem;
     }
 }
+.p-1 {
+    padding: 1.5rem;
+}
 li {
     width: 100%;
     background-color: $brand-primary-color;
+    list-style-type: none;
 }
 header {
     background-color: $brand-primary-color;
@@ -97,7 +98,7 @@ ul {
         width: 960px;
     }
     li {
-        width: calc(100% / 3);
+        width: calc(100% / 4);
     }
     input {
         width: 250px !important;
@@ -118,6 +119,24 @@ ul {
         width: 1140px;
     }
     li {
-        width: calc(100% / 6);
+        width: calc(100% / 5);
+    }
+}
+// wide 4k
+@media (min-width: 2560px) {
+    .container {
+        width: 2400px;
+    }
+    li {
+        width: calc(100% / 8);
+    }
+}
+// ultra wide
+@media (min-width: 3840px) {
+    .container {
+        width: 3600px;
+    }
+    li {
+        width: calc(100% / 12);
     }
 }
