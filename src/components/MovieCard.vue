@@ -16,7 +16,7 @@ export default {
   name: "MovieCard",
   data: function () {
     return {
-      flags: ["it", "en", "jp", "de", "fr"],
+      flags: ["it", "en", "ja", "de", "fr"],
     };
   },
   props: {
@@ -42,7 +42,8 @@ li {
   }
   img {
     width: 60px;
-    height: 40px;
+    height: auto;
+    border: 1px solid black;
   }
 }
 </style>

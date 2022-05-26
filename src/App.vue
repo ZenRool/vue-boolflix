@@ -18,6 +18,7 @@ export default {
     return {
       key: "712d751b0fecfb6d44a60386fc167499",
       movieList: [],
+      serieList: [],
     };
   },
   methods: {
