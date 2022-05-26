@@ -21,7 +21,17 @@
       alt="flag"
     />
     <p v-else>{{ movie.original_language }}</p>
-    <p>{{ movie.vote_average }}</p>
+    <p class="star">
+      <span v-for="n in filledStars" :key="n">
+        <i class="fas fa-star"></i>
+      </span>
+      <span v-if="isOdd">
+        <i class="fas fa-star-half-alt"></i>
+      </span>
+      <span v-for="n in 5 - filledStars - isOdd" :key="n">
+        <i class="far fa-star"></i>
+      </span>
+    </p>
   </li>
 </template>
 <script>
@@ -48,6 +58,12 @@ export default {
         ? this.movie.original_title
         : this.movie.original_name;
     },
+    filledStars() {
+      return Math.floor(this.movie.vote_average / 2);
+    },
+    isOdd() {
+      return Math.floor(this.movie.vote_average) % 2;
+    },
   },
 };
 </script>
@@ -66,6 +82,9 @@ li {
   }
   p {
     font-size: 1.5rem;
+    &.star {
+      color: goldenrod;
+    }
   }
   .flag {
     width: 30px;
