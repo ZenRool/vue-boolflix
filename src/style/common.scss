@@ -1,4 +1,5 @@
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./variables.scss";
 // RESET 
 * {
     padding: 0;
@@ -7,6 +8,7 @@
 }
 #app {
     font-family: sans-serif;
+    color: $text-color;
 }
 .p-1 {
     padding: 0.5rem;
@@ -18,7 +20,7 @@
         background-color: red;
         color: white;
         &:hover {
-            background-color: #FF3030;
+            background-color: #FF4040;
         }
     }
 }
@@ -59,6 +61,13 @@
 }
 li {
     width: 100%;
+    background-color: $brand-primary-color;
+}
+header {
+    background-color: $brand-primary-color;
+}
+ul {
+    background-color: $brand-secondary-color;
 }
 // md 
 @media (min-width: 768px) {

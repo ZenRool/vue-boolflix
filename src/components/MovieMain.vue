@@ -1,19 +1,12 @@
 <template>
   <ul
     class="container-fluid d-flex p-1 wrap"
-    v-if="this.listMo.length + this.listSe.length !== 0"
+    v-if="(this.list.length !== 0) & this.complete"
   >
     <MovieCard
-      v-for="(movie, index) in this.listMo"
-      :key="index"
+      v-for="(movie, index) in this.list"
+      :key="letIndex + index"
       :movie="movie"
-      :isMovie="true"
-    />
-    <MovieCard
-      v-for="(serie, index) in this.listSe"
-      :key="index + 100"
-      :movie="serie"
-      :isMovie="false"
     />
   </ul>
 </template>
@@ -25,9 +18,14 @@ export default {
     MovieCard,
   },
   props: {
-    listMo: Array,
-    listSe: Array,
+    list: Array,
+    letIndex: String,
+    complete: Boolean,
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ul {
+  padding-top: 2rem;
+}
+</style>
