@@ -1,7 +1,10 @@
 <template>
-  <li class="d-flex flex-column align-items-center p-1">
-    <h2>{{ movie.title }}</h2>
-    <p>{{ movie.original_title }}</p>
+  <li
+    class="d-flex flex-column align-items-center p-1"
+    :class="isMovie ? 'movieCard' : 'seriesCard'"
+  >
+    <h2>{{ cardName }}</h2>
+    <p>{{ cardOName }}</p>
     <img
       v-if="flagsIs"
       :src="require(`../assets/img/${movie.original_language}.svg`)"
@@ -21,17 +24,31 @@ export default {
   },
   props: {
     movie: Object,
+    isMovie: Boolean,
   },
   computed: {
     flagsIs() {
       return this.flags.includes(this.movie.original_language);
     },
+    cardName() {
+      return this.movie.title ? this.movie.title : this.movie.name;
+    },
+    cardOName() {
+      return this.movie.original_title
+        ? this.movie.original_title
+        : this.movie.original_name;
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
-li {
+li.movieCard {
   border: 3px solid red;
+}
+li.seriesCard {
+  border: 3px solid green;
+}
+li {
   height: 300px;
   h2,
   p {

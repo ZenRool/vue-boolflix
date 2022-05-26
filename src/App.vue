@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <MovieHeader @searchMovie="searchMovie($event)" />
-    <MovieMain :list="this.movieList" />
+    <MovieMain :listMo="this.movieList" :listSe="this.serieList" />
   </div>
 </template>
 <script>
@@ -32,6 +32,9 @@ export default {
       axios
         .get("https://api.themoviedb.org/3/search/movie", options)
         .then((resp) => (this.movieList = resp.data.results));
+      axios
+        .get("https://api.themoviedb.org/3/search/tv", options)
+        .then((resp) => (this.serieList = resp.data.results));
     },
   },
 };
